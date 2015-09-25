@@ -1,0 +1,28 @@
+
+// Common - Decorators
+//------------------------------------------------------------------------------
+
+.horizontal-dotted-line,
+.vertical-dotted-line {
+  position: relative;
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: url("../img/decorators/separator-dotted-border-vertical.png") repeat-y;
+  }
+}
+
+.horizontal-dotted-line {
+  &:after {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: url("../img/decorators/separator-dotted-border-horizontal.png") repeat-x;
+  }
+}

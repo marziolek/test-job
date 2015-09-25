@@ -1,0 +1,62 @@
+
+// Component - News widget
+//------------------------------------------------------------------------------
+
+.news-widget {
+  width: 100%;
+  max-width: $container-width * 2/3;
+
+  @media (max-width: $container-width + ($container-padding * 2.75)) {
+    max-width: 100%;
+  }
+
+  @media (max-width: $container-width / 3 + $container-padding * 3) {
+    .column-auto {
+      display: block;
+    }
+  }
+}
+
+.news-section {
+  padding-bottom: $container-padding;
+
+  .header {
+    color: white;
+    @extend %background-gradient-pink;
+    margin-bottom: $container-padding * 3/2;
+  }
+
+  .news-post-excerpt {
+    padding: 0 $container-padding;
+  }
+
+  .img-wrapper {
+    margin-right: $container-padding;
+    margin-bottom: $container-padding;
+    border: 1px solid #EAE1D4;
+
+    img {
+      vertical-align: middle;
+      border: 2px solid white;
+    }
+    
+    @media (max-width: $container-width / 3 + $container-padding * 3) {
+      margin-right: 0;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: $container-width * 2/3) {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.see-more {
+  color: $color-pink; 
+
+  [class^="icon-"] {
+    margin-left: .6em; 
+  }
+}

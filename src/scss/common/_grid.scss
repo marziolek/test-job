@@ -1,0 +1,20 @@
+
+// Common - Grid
+//------------------------------------------------------------------------------
+
+[class*="col-"] {
+  float: left;
+}
+
+.col-33 {
+  width: 33.333333%; 
+}
+
+.col-50 {
+  width: 50%;
+}
+
+.column-auto {
+  display: table-cell;
+  vertical-align: top;
+}

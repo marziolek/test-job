@@ -1,0 +1,40 @@
+
+// Component - Widget
+//------------------------------------------------------------------------------
+
+.widget {
+  background-color: white;
+  @extend %border-radius;
+  overflow: hidden; 
+  float: left;
+  width: 100%;
+  margin-bottom: $container-padding;
+  @extend %box-shadow;
+
+  .header {
+    display: table;
+    width: 100%;
+    height: $header-height;
+    padding: 0 $container-padding;
+    color: $color-pink;
+
+    h1, h2, h3, h4, h5 {
+      display: table-cell;
+      vertical-align: middle;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+
+  span, 
+  p {
+    color: $color-widget-text;
+    margin: 0;
+  }
+
+  .col-50 {
+    @media (max-width: $container-width * 2/3) {
+      width: 100%;
+    } 
+  }
+}

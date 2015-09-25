@@ -1,0 +1,66 @@
+
+// Component - Side widget
+//------------------------------------------------------------------------------
+
+.side-widget {
+
+}
+
+.side-widget-content {
+  padding: $container-padding; 
+}
+
+.randomly-selected {
+  ul {
+    padding-left: $container-padding; 
+  }
+
+  li {
+    margin: ($container-padding / 2) 0; 
+    padding-left: $container-padding / 4; 
+    list-style-image: url(../img/icons/icon-arrow.png);
+
+    &:first-of-type,
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}
+
+.social-icon-list-item {
+  line-height: 30px;
+  text-align: center;
+
+  * {
+    vertical-align: middle;
+  }
+
+  &:first-of-type {
+    text-align: left;
+  }
+
+  &:last-of-type {
+    text-align: right;
+  }
+
+  a {
+    font-size: 1em;
+    display: block;
+
+    &:hover {
+      text-decoration: none;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media (max-width: $container-width /3 + $container-padding * 2) {
+    width: 100%;
+    text-align: left;
+    &:last-of-type {
+      text-align: left;
+    }
+  }
+}

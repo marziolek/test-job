@@ -1,0 +1,56 @@
+
+// Common - Layout
+//------------------------------------------------------------------------------
+
+/* Container */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: $container-width + 2 * $container-padding;
+  padding: 0 $container-padding;
+  margin: 0 auto;
+}
+
+.site-name {
+  width: 200px;
+  height: 50px;
+
+  span {
+    background: url(../img/common/logo.png) no-repeat;
+  }
+}
+
+
+/* Navigation */
+.navigation {
+
+  li {
+
+  }
+
+  a {
+
+  }
+}
+
+/* Content */
+.content {
+
+}
+
+/* Sidebar */
+.sidebar {
+  width: 100%;
+  max-width: $container-width / 3; 
+  float: left;
+  padding-left: $container-padding;
+  
+  @media (max-width: $container-width + ($container-padding * 2.75)) {
+     padding-left: 0;
+  }
+}
+
+/* Footer */
+.footer {
+  clear: both;
+}

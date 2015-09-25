@@ -1,0 +1,31 @@
+/* =========================================================================
+
+    Project: job-test
+    Author: XHTMLized
+    Last updated: @@timestamp
+@@toc
+
+   ========================================================================= */
+
+// Vendor Dependencies
+@import "normalize.css/normalize";
+@import "vendor/colorbox";
+
+// Authored Dependencies
+@import "setup/variables";
+@import "setup/mixins";
+
+
+
+// Common styles & layouts
+@import "common/base";
+@import "common/utilities";
+@import "common/layout";
+@import "common/grid";
+@import "common/decorators";
+@import "common/icons";
+
+// Components
+@import "components/widgets";
+@import "components/news_widget";
+@import "components/side_widget";

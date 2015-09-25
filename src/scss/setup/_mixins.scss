@@ -1,0 +1,17 @@
+
+// Mixins
+//------------------------------------------------------------------------------
+
+%border-radius {
+  border-radius: $border-radius;
+}
+
+%background-gradient-pink {
+  background: url("../img/backgrounds/gradient-pink.jpg") repeat-x;
+} 
+
+%box-shadow {
+  -webkit-box-shadow: 2px 2px 0px 0px $color-shadow;
+  -moz-box-shadow: 2px 2px 0px 0px $color-shadow;
+  box-shadow: 2px 2px 0px 0px $color-shadow;
+}

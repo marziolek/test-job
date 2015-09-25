@@ -1,0 +1,59 @@
+
+// Common - Base
+//------------------------------------------------------------------------------
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: $font-arial;
+  font-size: $font-size;
+  line-height: $font-line-height;
+  background-color: $color-bg;
+  line-height: $line-height;
+}
+
+a {
+  color: $color-widget-text;
+  text-decoration: none;
+  font-size: $font-text;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+span,
+p {
+  font-size: $font-text;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+}
+
+h3 {
+  font-size: $font-bigger-text;
+}
+
+h4 {
+  font-size: $font-text;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  li {
+    
+  }
+}

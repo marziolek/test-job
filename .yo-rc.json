@@ -1,0 +1,15 @@
+{
+  "generator-xh": {
+    "config": {
+      "projectName": "job-test",
+      "useBranding": true,
+      "extension": "html",
+      "reloader": "BrowserSync",
+      "server": true,
+      "cssPreprocessor": "LIBSASS",
+      "ignoreDist": true,
+      "isWP": false,
+      "features": []
+    }
+  }
+}
