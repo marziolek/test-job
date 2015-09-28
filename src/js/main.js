@@ -35,9 +35,10 @@
         });
 
         var slideshowCounter = 1;
+        var slides = $('.img-wrapper img').length;
         $(document).bind('cbox_complete', function(){
 
-          if (slideshowCounter != 4) {
+          if (slideshowCounter != slides) {
             ++slideshowCounter;
             setTimeout($.colorbox.next, 2000);
           } else {

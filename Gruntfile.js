@@ -9,6 +9,7 @@ module.exports = function (grunt) {
     includereplace: 'grunt-include-replace',
     replace: 'grunt-text-replace',
     validation: 'grunt-html-validation',
+    sprite: 'grunt-spritesmith',
   });
 
   // Project configuration.
@@ -27,11 +28,22 @@ module.exports = function (grunt) {
       designs: 'designs',
       assets: '{img,media,fonts,<%= xh.designs %>}',
       images: '{img,media}' // used in imagemin
+    },
+    
+    sprite:{
+      all: {
+        src: 'src/img/sprites/**/*.png',
+        dest: 'src/designs/spritesheet.png',
+        destCss: 'src/designs/sprites.css'
+      }
     }
   });
 
   // Load per-task config from separate files.
   grunt.loadTasks('grunt');
+  
+  // Load in `grunt-spritesmith`
+  grunt.loadNpmTasks('grunt-spritesmith');
 
   grunt.registerTask('validate', [
     'validation',
