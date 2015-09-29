@@ -2,9 +2,6 @@
 // Sprites
 //------------------------------------------------------------------------------
 
-@import "sprites@1x";
-@import "sprites@2x";
-
 @mixin sprite-retina($sprite, $sprite2x) {
   @include sprite($sprite);
   @include sprite-background-size($sprite);
@@ -12,4 +9,16 @@
   @media only screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
     @include sprite-image($sprite2x);
   }
+}
+
+.icon-social-fb {
+  @include sprite-retina($sprite-social-fb, $sprite-social-fb-2x);
+}
+
+.icon-social-g {
+  @include sprite-retina($sprite-social-g, $sprite-social-g-2x);
+}
+
+.icon-social-tw {
+  @include sprite-retina($sprite-social-tw, $sprite-social-tw-2x);
 }

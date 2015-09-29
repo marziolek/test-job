@@ -25,23 +25,24 @@ module.exports = function (grunt) {
       usemin: ['{head,scripts}.html'],
       root: __dirname,
       includes: '<%= xh.src %>/includes',
-      designs: 'designs',
+      designs: 'dist/designs',
       assets: '{img,media,fonts,<%= xh.designs %>}',
       images: '{img,media}' // used in imagemin
     },
-    
+
     sprite:{
       all: {
         src: 'src/img/sprites/**/*.png',
-        dest: 'src/designs/spritesheet.png',
-        destCss: 'src/designs/sprites.css'
+        dest: 'design/spritesheet.png',
+        destCss: 'src/scss/setup/_sprites_mixins.scss',
+        cssTemplate: 'src/scss/setup/_sprites.scss.mustache'
       }
     }
   });
 
   // Load per-task config from separate files.
   grunt.loadTasks('grunt');
-  
+
   // Load in `grunt-spritesmith`
   grunt.loadNpmTasks('grunt-spritesmith');
 
@@ -64,6 +65,8 @@ module.exports = function (grunt) {
   grunt.registerTask('build', 'Build site files', [
     'clean:dist',
     'postinstall',
+
+    'sprite',
 
     'build-usemin-min',
     'build-html',
